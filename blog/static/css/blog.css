@@ -70,6 +70,15 @@ h4 {
     float: right;
 }
 
+tag {
+    background-color: aqua;
+    border: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+
 .btn-secondary,
 .btn-secondary:visited {
     color: var(--main-color);

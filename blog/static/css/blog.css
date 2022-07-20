@@ -1,5 +1,9 @@
+:root {
+    --main-color:#0058ccd7;
+}
+
 h1 a, h2 a {
-    color: #27b120;
+    color: var(--main-color);
     font-family: 'Lobster';
 }
 
@@ -8,7 +12,7 @@ body {
 }
 
 .page-header {
-    background-color: #27b120;
+    background-color: var(--main-color);
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
@@ -66,14 +70,23 @@ h4 {
     float: right;
 }
 
+tag {
+    background-color: aqua;
+    border: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
+    color: var(--main-color);
     background: none;
-    border-color: #C25100;
+    border-color: var(--main-color);
 }
 
 .btn-secondary:hover {
     color: #FFFFFF;
-    background-color: #C25100;
+    background-color: var(--main-color);
 }

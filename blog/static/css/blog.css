@@ -1,5 +1,5 @@
 :root {
-    --main-color:#0058ccd7;
+    --main-color:#505c7d;
 }
 
 h1 a, h2 a {
@@ -71,8 +71,9 @@ h4 {
 }
 
 tag {
-    background-color: aqua;
-    border: #000000;
+    background-color: #608c8d;
+    border: #707c8d;
+    color:#000000;
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;

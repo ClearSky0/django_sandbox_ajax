@@ -1,5 +1,5 @@
 :root {
-    --main-color:#505c7d;
+    --main-color:#5858e0;
 }
 
 h1 a, h2 a {
@@ -71,13 +71,13 @@ h4 {
 }
 
 tag {
-    background-color: #608c8d;
-    border: #707c8d;
-    color:#000000;
+    background-color: #6161ef;
+    border: #9393f9;
+    color:#f4d8d8;
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-    padding: 3px;
+    padding: 5px;
 }
 
 .btn-secondary,

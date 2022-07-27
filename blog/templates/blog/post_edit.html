@@ -1,9 +1,45 @@
 {% extends 'blog/base_select2.html' %}
 
 {% block content %}
-    <h2>New post</h2>
-    <form method="POST" class="post-form">{% csrf_token %}
+    <style>
+        #id_sponsor {
+            width: 50%;
+        }
+    </style>
+
+    <h2>Edit with Select2</h2>
+    <form action="" method="POST" class="post-form">
+        {% csrf_token %}
+        <input type="hidden" id="myVar" name="variable" value="{{ request.path }}">
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-secondary">Save</button>
+        <button type="submit" class="save btn btn-secondary" value="submit">Save</button>
     </form>
+
+    <script>
+        var requestPath = document.getElementById("myVar").value;
+
+        const form = document.getElementById('p_form')
+        console.log(form)
+
+        $(document).ready(function () {
+            $('#id_publication').select2()
+
+            $('#id_sponsor').select2({
+                ajax: {
+                    url: requestPath,
+                    dataType: 'json',
+                    processResults: function (data) {
+                        console.log(data)
+                        console.log({results: $.map(data, function (item) {return {id: item.id, text: item.name};})})
+                        return {
+                            results: $.map(data, function (item) {
+                                return {id: item.id, text: item.name};
+                            })
+                        };
+                    }
+                },
+                minimumInputLength: 1
+            });
+        });
+    </script>
 {% endblock %}

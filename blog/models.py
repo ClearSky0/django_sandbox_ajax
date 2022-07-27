@@ -14,10 +14,17 @@ class Publication(models.Model):
     def __str__(self):
         return self.name
 
-class Post(models.Model):
+class Sponsor(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+class Blog_Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    tags = models.ManyToManyField(Tag)
     publication = models.ForeignKey(Publication, on_delete=models.CASCADE)
+    sponsor = models.ForeignKey(Sponsor, on_delete=models.CASCADE)
+    tags = models.ManyToManyField(Tag)
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
